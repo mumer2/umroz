@@ -23,6 +23,7 @@ const products = [
     description: "Elegant watch with silver finish for special occasions.",
     price: "$299",
     image: silverwhite,
+
   },
 ];
 
@@ -31,7 +32,9 @@ const App = () => {
   const phoneNumber = "+923229199459"; // Replace with your number
 
   const handleOrder = (product) => {
-    const message = `Hello! I'm interested in:\n\n*${product.name}*\n${product.description}\nPrice: ${product.price}\n\nImage: ${product.image}`;
+    const imageUrl = `https://umroz.vercel.app/${product.image}`;
+    const message = `Hello! I'm interested in:\n\n*${product.name}*\n${product.description}\nPrice: ${product.price}\n\nImage: ${imageUrl}`;
+    // \n\nImage: ${product.image}
     const encodedMessage = encodeURIComponent(message);
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     window.open(whatsappURL, "_blank");
