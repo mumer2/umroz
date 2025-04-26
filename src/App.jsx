@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Golden from "./assets/golden.jpeg";
-import GoldenBlue from "./assets/goldenBlue.jpeg";
-import SilverWhite from "./assets/silver White 3.jpeg";
+import Golden from "./assets/Golden.jpeg";
+import GoldenBlue from "./assets/GoldenBlue.jpeg";
+import SilverWhite from "./assets/silver white 3.jpeg";
 const products = [
   {
     id: 1,
