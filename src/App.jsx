@@ -5,23 +5,23 @@ import silverwhite from "./assets/silver white 3.jpeg";
 const products = [
   {
     id: 1,
-    name: "Classic Leather Watch",
-    description: "Timeless design with genuine leather strap.",
-    price: "$249",
+    name: "Classic Full Golden Watch",
+    description: "Timeless design with Full Golden strap.",
+    price: "1999-Rs",
     image: golden,
   },
   {
     id: 2,
-    name: "Modern Digital Watch",
-    description: "Smart and sleek digital watch with multiple features.",
-    price: "$199",
+    name: "Modern Goldenn Watch with Blue Dial",
+    description: "Smart and sleek Golden watch with blue dial.",
+    price: "1999-Rs",
     image: goldenblue,
   },
   {
     id: 3,
-    name: "Elegant Silver Watch",
+    name: "Elegant Silver Watch with White Dial",
     description: "Elegant watch with silver finish for special occasions.",
-    price: "$299",
+    price: "1799-Rs",
     image: silverwhite,
 
   },
@@ -34,7 +34,6 @@ const App = () => {
   const handleOrder = (product) => {
     const imageUrl = `https://umroz.vercel.app/${product.image}`;
     const message = `Hello! I'm interested in:\n\n*${product.name}*\n${product.description}\nPrice: ${product.price}\n\nImage: ${imageUrl}`;
-    // \n\nImage: ${product.image}
     const encodedMessage = encodeURIComponent(message);
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     window.open(whatsappURL, "_blank");
