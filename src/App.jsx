@@ -26,7 +26,7 @@ const products = [
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const phoneNumber = "+923229299459"; // Replace with your number
+  const phoneNumber = "+923229199459"; // Replace with your number
 
   const handleOrder = (product) => {
     const message = `Hello! I'm interested in:\n\n*${product.name}*\n${product.description}\nPrice: ${product.price}\n\nImage: ${product.image}`;
