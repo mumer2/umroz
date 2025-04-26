@@ -1,28 +1,28 @@
 import React, { useState } from "react";
-import Golden from "./assets/Golden.jpeg";
-import GoldenBlue from "./assets/GoldenBlue.jpeg";
-import SilverWhite from "./assets/silver white 3.jpeg";
+import golden from "./assets/golden.jpeg";
+import goldenblue from "./assets/goldenblue.jpeg";
+import silverwhite from "./assets/silver white 3.jpeg";
 const products = [
   {
     id: 1,
     name: "Classic Leather Watch",
     description: "Timeless design with genuine leather strap.",
     price: "$249",
-    image: Golden,
+    image: golden,
   },
   {
     id: 2,
     name: "Modern Digital Watch",
     description: "Smart and sleek digital watch with multiple features.",
     price: "$199",
-    image: GoldenBlue,
+    image: goldenblue,
   },
   {
     id: 3,
     name: "Elegant Silver Watch",
     description: "Elegant watch with silver finish for special occasions.",
     price: "$299",
-    image: SilverWhite,
+    image: silverwhite,
   },
 ];
 
