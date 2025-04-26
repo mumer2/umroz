@@ -1,26 +1,28 @@
 import React, { useState } from "react";
-
+import Golden from "./assets/golden.jpeg";
+import GoldenBlue from "./assets/goldenBlue.jpeg";
+import SilverWhite from "./assets/silver White 3.jpeg";
 const products = [
   {
     id: 1,
     name: "Classic Leather Watch",
     description: "Timeless design with genuine leather strap.",
     price: "$249",
-    image: "https://via.placeholder.com/300x300.png?text=Leather+Watch",
+    image: Golden,
   },
   {
     id: 2,
     name: "Modern Digital Watch",
     description: "Smart and sleek digital watch with multiple features.",
     price: "$199",
-    image: "https://via.placeholder.com/300x300.png?text=Digital+Watch",
+    image: GoldenBlue,
   },
   {
     id: 3,
     name: "Elegant Silver Watch",
     description: "Elegant watch with silver finish for special occasions.",
     price: "$299",
-    image: "https://via.placeholder.com/300x300.png?text=Silver+Watch",
+    image: SilverWhite,
   },
 ];
 
@@ -38,6 +40,18 @@ const App = () => {
   return (
     <div className="min-h-screen bg-gradient-to-r from-gray-100 to-gray-300">
       {/* Navbar */}
+      <div className="announcement bg-green-500 text-white text-center py-2">
+        <marquee className="text-lg font-semibold flex items-center justify-center space-x-6">
+          <span className="inline-block">
+          Welcome to UMROZ!
+          </span>
+          <span className="inline-block">
+          Enjoy our exclusive collection of premium watches.
+          </span>
+          <span className="font-bold text-blue-800"> Limited Time Offer! </span>
+          <b className="text-red-600">UPTO 30% OFF</b>
+        </marquee>
+      </div>
       <nav className="flex items-center justify-between p-4 bg-white shadow-md sticky top-0 z-50">
         <div className="text-2xl font-bold text-gray-800">⌚ UMROZ</div>
 
@@ -104,7 +118,7 @@ const App = () => {
             className="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition duration-500"
           >
             <img
-              src={product.image}
+              src={product.image} 
               alt={product.name}
               className="w-full h-72 object-cover hover:opacity-90 transition duration-300"
             />
