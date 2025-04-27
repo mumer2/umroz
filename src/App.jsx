@@ -71,7 +71,8 @@ const App = () => {
   const phoneNumber = "+923229199459";
 
   const handleOrder = (product) => {
-    const message = `Hello! I'm interested in:\n\n*${product.name}*\n${product.description}\nPrice: ${product.price}`;
+    const imageUrl = `https://umroz.vercel.app/${product.image}`;
+    const message = `Hi! I want to Buy:\n\n*${product.name}*\n${product.description}\nPrice: ${selectedProduct.price}\n\nImage: ${imageUrl}`;
     const encodedMessage = encodeURIComponent(message);
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     window.open(whatsappURL, "_blank");
@@ -214,7 +215,7 @@ const ProductCard = ({ product, onSelect }) => (
       <h3 className="text-lg font-bold text-gray-800">{product.name}</h3>
       {/* <p className="text-green-600 font-semibold">{product.price}</p> */}
     </div>
-    <div className="mb-6">
+    <div className="mb-6 ml-5 ">
     <p className="text-xl font-bold text-green-600">{product.salePrice}</p>
     <p className="text-gray-400 line-through text-sm">{product.originalPrice}</p>
   </div>
