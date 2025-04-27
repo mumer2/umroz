@@ -72,7 +72,7 @@ const App = () => {
 
   const handleOrder = (product) => {
     const imageUrl = `https://umroz.vercel.app/${product.image}`;
-    const message = `Hi! I want to Buy:\n\n*${product.name}*\n${product.description}\nPrice: ${selectedProduct.price}\n\nImage: ${imageUrl}`;
+    const message = `Hi! I want to Buy:\n\n*${product.name}*\n${product.description}\nPrice: ${selectedProduct.salePrice}\n\nImage: ${imageUrl}`;
     const encodedMessage = encodeURIComponent(message);
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     window.open(whatsappURL, "_blank");
