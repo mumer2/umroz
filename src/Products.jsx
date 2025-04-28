@@ -3,6 +3,9 @@ import '@fortawesome/fontawesome-free/css/all.min.css'; // Font Awesome
 import golden from "./assets/golden.jpeg";
 import goldenblue from "./assets/goldenblue.jpeg";
 import silverwhite from "./assets/silver white 3.jpeg";
+import slideimage1 from "./assets/slider1.jpeg";
+import slideimage2 from "./assets/slider2.jpeg";
+import slideimage3 from "./assets/slider3.jpeg";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules'; // Important for autoplay
 import 'swiper/css';
@@ -67,7 +70,7 @@ const products = [
 
 const Products = () => {
   // const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const slides = [golden, goldenblue, silverwhite];
+  const slides = [slideimage1, slideimage3];
   const [selectedProduct, setSelectedProduct] = useState(null);
   const phoneNumber = "+923229199459";
 
@@ -92,7 +95,7 @@ const Products = () => {
 >
   {slides.map((slide, index) => (
     <SwiperSlide key={index}>
-      <img src={slide} alt={`slide-${index}`} className="h-96 w-full object-cover" />
+      <img src={slide} alt={`slide-${index}`} className="h-fixed w-full object-cover" />
     </SwiperSlide>
   ))}
 </Swiper>
